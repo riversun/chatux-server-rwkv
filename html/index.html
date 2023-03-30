@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>chatRWKV </title>
+</head>
+<body>
+<script src="https://riversun.github.io/chatux/chatux.min.js"></script>
+<script>
+    const chatux = new ChatUx();
+
+    // initializing param for chatux
+ const initParam =
+        {
+            renderMode: 'auto',
+            api: {
+                //echo chat server
+                endpoint:'/chat_api',
+                method: 'GET',
+                dataType: 'json'
+            },
+            bot: {
+                botPhoto: 'https://riversun.github.io/chatbot/bot_icon_operator.png',
+                humanPhoto: null,
+                widget: {
+                    sendLabel: 'SEND',
+                    placeHolder: 'Say something'
+                }
+            },
+            window: {
+                title: 'chatRWKV',
+                infoUrl: 'https://github.com/riversun/chatux'
+            }
+        };
+    chatux.init(initParam);
+    chatux.start(true);
+
+
+</script>
+</body>
+</html>
